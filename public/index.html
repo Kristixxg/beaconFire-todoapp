@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-do Application</title>
+  </head>
+  <body>
+    <header><h1>To-do Application</h1></header>
+    <div id="todos"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Timestamp</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <div id="newTodo">
+      <div>
+        <p>Add New To-do Item</p>
+      </div>
+      <div id="formDiv">
+        <form id="form" action="submit">
+          <label for="">Title</label>
+          <input required id="todoTitle" type="text" name="title" />
+
+          <label for="">Description</label>
+          <input required id="todoDescription" type="text" name="description" />
+
+          <button id="submitBtn" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="script.js"></script>
+</html>
