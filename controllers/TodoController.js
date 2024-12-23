@@ -28,7 +28,7 @@ export const postTodo = async (req, res) => {
 export const updateTodo = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(id);
+    // console.log(id);
 
     const todo = await Todo.findById(id);
     if (!todo) {

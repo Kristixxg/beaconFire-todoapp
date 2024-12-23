@@ -12,7 +12,7 @@ const renderExistingTodos = async () => {
       throw new Error(`Error: ${response.status} ${response.statusText}`);
     }
     const todos = await response.json();
-    console.log(todos);
+    // console.log(todos);
 
     todos.map((data) => {
       const statusText = data.status ? "Complete" : "Incomplete";
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const newTodo = await response.json();
-      console.log("New Item added: ", newTodo);
+      // console.log("New Item added: ", newTodo);
       document.getElementById("todoDescription").value = "";
       document.getElementById("todoTitle").value = "";
       tableBody.innerHTML = "";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(`Error status ${response.status}`);
       }
       const updatedTodo = await response.json();
-      console.log("successfully dated todo: ", updatedTodo);
+      // console.log("successfully dated todo: ", updatedTodo);
       tableBody.innerHTML = "";
       renderExistingTodos();
     } catch (error) {
